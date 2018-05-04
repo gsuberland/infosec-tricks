@@ -112,6 +112,8 @@ On the off-chance that the box is running an NTP server (usually UDP port 123) y
 ntpq -pn [host]
 ```
 
+It's worth noting that there are some NTP server configurations that send NTP traffic to broadcast and multicast addresses on the local subnet. If you're on the same network as the server you should check Wireshark to see if there's any NTP traffic flying around.
+
 ### Finger
 
 Once we stop laughing at the funny name and the fact that someone actually left it enabled (in 2018, really!?) we can sometimes use it to see or guess the current server time.
