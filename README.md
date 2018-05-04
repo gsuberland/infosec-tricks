@@ -8,3 +8,12 @@ Pull requests are welcome!
 
 * [Remote Server Time](remote_server_time.md)
 
+
+
+## License
+
+All content herein is released under dual license:
+
+- [MIT License](https://en.wikipedia.org/wiki/MIT_License)
+- [Willy Wonka Software License](https://github.com/gsuberland/Willy-Wonka-License)
+
