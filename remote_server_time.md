@@ -114,6 +114,8 @@ smb2.cmd == 0 && smb2.flags.response == 1
 
 The packet can also sometimes tell you the boot time of the server, although this field is optional.
 
+If the system is really old and only supports SMB1 you'll likely need to enable that explicitly on your side (it's usually disabled for security) and modify the above Wireshark filter to use `smb` rather than `smb2`.
+
 ### NTP
 
 On the off-chance that the box is running an NTP server (usually UDP port 123) you can try to get a timestamp from it that way. The `ntpq` command is useful here:
