@@ -104,6 +104,16 @@ When connecting to an SMTP server the initial `220` message sent by the server o
 
 If you see SMTP open this is a good and simple option you can try via `telnet` or `nc`.
 
+### SMB Negotiate
+
+When you try to authenticate to an SMB server, the Negotiate Protocol Response packet contains a timestamp. The following Wireshark filter will show you these packets:
+
+```
+smb2.cmd == 0 && smb2.flags.response == 1
+```
+
+The packet can also sometimes tell you the boot time of the server, although this field is optional.
+
 ### NTP
 
 On the off-chance that the box is running an NTP server (usually UDP port 123) you can try to get a timestamp from it that way. The `ntpq` command is useful here:
